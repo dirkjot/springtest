@@ -30,6 +30,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("junit:junit")
     compile("org.projectlombok:lombok:1.16.2")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 }
 
 task wrapper(type: Wrapper) {
