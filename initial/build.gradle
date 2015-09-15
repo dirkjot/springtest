@@ -29,6 +29,7 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("junit:junit")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
     compile("org.projectlombok:lombok:1.16.2")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 }
