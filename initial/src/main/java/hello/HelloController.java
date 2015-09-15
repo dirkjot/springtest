@@ -18,7 +18,7 @@ public class HelloController {
 
     @RequestMapping("/helloworld2")
     public @ResponseBody String helloworld2() {
-        return "<h1>Hello world</h1><p>Hardcoded without a template</p>";
+        return "<html><h1>Hello world</h1><p>Hardcoded without a template</p></html>";
     }
 }
 
