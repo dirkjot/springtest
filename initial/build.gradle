@@ -33,6 +33,7 @@ dependencies {
     testCompile("com.jayway.jsonpath:json-path")
     compile("org.projectlombok:lombok:1.16.2")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    testCompile("org.springframework.boot:spring-boot-starter-thymeleaf")
 }
 
 task wrapper(type: Wrapper) {
