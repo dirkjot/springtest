@@ -18,10 +18,25 @@ public class GreetingController {
     @Autowired
     LookupService lookupService;
 
+
+    @RequestMapping("/simplegreeting")
+    public Greeting simplegreeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return new Greeting();
+    }
+
+
+    @RequestMapping("/simplegreeting2")
+    public Greeting simplegreeting2(@RequestParam(value="name", defaultValue="World") String name) {
+        return new Greeting(counter.incrementAndGet(),
+                String.format(template, name),
+                false);
+    }
+
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
-                String.format(template, name));
+                String.format(template, name),
+                true);
     }
 
     @RequestMapping("/quote")

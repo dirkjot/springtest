@@ -1,9 +1,9 @@
 package hello;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Data;
+//import lombok.Data;
 
-@Data
+//@Data
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Quote {
@@ -11,13 +11,13 @@ public class Quote {
     private String type;
     private Value value;
 
-   /* public String getType() {
+   public String getType() {
         return type;
     }
 
     public Value getValue() {
         return value;
     }
-*/
+
 
 }

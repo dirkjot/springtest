@@ -16,7 +16,8 @@ public class LookupService {
     public Future<Greeting> find(Long id, String name) throws InterruptedException {
         System.out.println("Looking up " + name);
         Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
-        Greeting greeting = new Greeting(id, name, quote.getValue().getQuote());
+        Greeting greeting = new Greeting(id, name, false);
+        greeting.setQuote(quote.getValue().getQuote());
         Thread.sleep(1000L);
         return new AsyncResult<Greeting>(greeting);
     }
